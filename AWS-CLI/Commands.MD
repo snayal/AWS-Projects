@@ -4,8 +4,8 @@ AWS configure
 
 S3 bucket :
 
-  abort-multipart-upload
-complete-multipart-upload
+  - abort-multipart-upload
+- complete-multipart-upload
 copy-object
 create-bucket
 create-multipart-upload
