@@ -1,15 +1,27 @@
 # AWS CLI Commands
 
-AWS configure
+Configure CLI
+-    *AWS configure*
 
-S3 bucket :
+***S3 bucket :***
 
-  - abort-multipart-upload
-- complete-multipart-upload
-copy-object
-create-bucket
-create-multipart-upload
-delete-bucket
+- List Buckets & Content
+```sh
+aws s3 ls
+aws s3 ls s3://<bucket>
+```
+```sh
+Make Bucket: aws s3 mb s3://<bucket>
+Remove Empty Bucket: aws s3 rb s3://<bucket>
+Sync Objects: aws s3 sync <local> s3://bucket
+Copy to Bucket: aws s3 <object> s3://<bucket>
+Copy from Bucket: aws s3 cp s3://<bucket>/<object> <destination>
+Move Object: aws s3 mv s3://<bucket>/<object> <destination>
+Remove Object: aws s3 rm s3://<bucket>/<object>
+Sync Objects Between Buckets or Directories: aws s3 sync <local> s3://<bucket> 
+```
+```sh
+  
 delete-bucket-analytics-configuration
 delete-bucket-cors
 delete-bucket-encryption
@@ -98,3 +110,4 @@ upload-part
 upload-part-copy
 wait
 write-get-object-response
+```
